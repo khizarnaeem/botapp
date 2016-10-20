@@ -76,7 +76,7 @@ def send_message(recipient_id, message_text):
       "message":{
         "attachment":{
           "type":"template",
-          "payload":[{
+          "payload":{
             "template_type":"receipt",
             "recipient_name":"Khizar Naeem",
             "order_number":"12345678902",
@@ -116,17 +116,7 @@ def send_message(recipient_id, message_text):
               "total_tax":0,
               "total_cost":188.90
             },
-            "adjustments":[
-              {
-                "name":"New Customer Discount",
-                "amount":10
-              },
-              {
-                "name":"$10 Off Coupon",
-                "amount":10
-              }
-            ]
-          }]
+          }
         }
       }
     })

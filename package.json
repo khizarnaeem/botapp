@@ -1,0 +1,17 @@
+{
+  "name": "floating-ocean-58340",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/khizarnaeem/botapp.git",
+    "type": "git"
+  },
+  "scripts": {
+    "version": "git add changelog.md",
+  },
+  "author": "khizarnaeem <khizar.naeem2010@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

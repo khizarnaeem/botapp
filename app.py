@@ -70,55 +70,12 @@ def send_message(recipient_id, message_text):
         "Content-Type": "application/json"
     }
     data = json.dumps({
-      "recipient":{
-        "id": recipient_id
-      },
-      "message":{
-        "attachment":{
-          "type":"template",
-          "payload":{
-            "template_type":"receipt",
-            "recipient_name":"Khizar Naeem",
-            "order_number":"12345678902",
-            "currency":"EUR",
-            "payment_method":"iDeal",
-            "order_url":"http://debijenkorf.nl",
-            "timestamp":"1428444852",
-            "elements":[
-              {
-                "title":"Maine3 regular fit jeans van stretchkatoen",
-                "subtitle":"HUGO BOSS",
-                "quantity":1,
-                "price":139.95,
-                "currency":"EUR",
-                "image_url":"https://cdn-1.debijenkorf.nl/web_detail_2x/hugo-boss-maine3-regular-fit-jeans-van-stretchkatoen/?reference=092/880/13_0928801007700000_pro_mod_frt_01_1108_1528_1284735.jpg"
-              },
-              {
-                "title":"Daisley T-shirt met paisleyprint",
-                "subtitle":"HUGO BOSS",
-                "quantity":1,
-                "price":48.95,
-                "currency":"EUR",
-                "image_url":"https://cdn-1.debijenkorf.nl/web_detail_2x/hugo-boss-daisley-t-shirt-met-paisleyprint/?reference=045/310/13_0453103910700000_pro_mod_frt_01_1108_1528_1220614.jpg"
-              }
-            ],
-            "address":{
-              "street_1":"Dam 1",
-              "street_2":"",
-              "city":"Amsterdam",
-              "postal_code":"1012 JS",
-              "state":"NH",
-              "country":"NL"
-            },
-            "summary":{
-              "subtotal":188.90,
-              "shipping_cost":3.95,
-              "total_tax":0,
-              "total_cost":188.90
-            },
-          }
+        "recipient": {
+            "id": recipient_id
+        },
+        "message": {
+            "text": message_text
         }
-      }
     })
     r = requests.post("https://graph.facebook.com/v2.6/me/messages", params=params, headers=headers, data=data)
     if r.status_code != 200:

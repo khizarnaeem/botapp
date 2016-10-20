@@ -40,7 +40,7 @@ def webhook():
                     message_text = messaging_event["message"]["text"]  # the message's text
 
                     #send_message(sender_id, "Hi, I'm your personal BOT. I can do a lot of things for you. but for now just ask me my name")
-					add_greeting(sender_id, message_text)
+                    add_greeting(sender_id, message_text)
 
                 if messaging_event.get("delivery"):  # delivery confirmation
                     pass
@@ -54,10 +54,10 @@ def webhook():
     return "ok", 200
 
 def add_greeting(sender_id, message_text):
-	if "hi" in message_text:
-		send_message(sender_id, "Hello I'm a Bot")
-	else:
-		send_message(sender_id, "Errr, I don't get it")
+    if "hi" in message_text:
+        send_message(sender_id, "Hello I'm a Bot")
+    else:
+        send_message(sender_id, "Errr, I don't get it")
 
 def send_message(recipient_id, message_text):
 

@@ -119,7 +119,7 @@ def send_message(recipient_id, message_text):
             "adjustments":[
               {
                 "name":"New Customer Discount",
-                "amount":0
+                "amount":10
               },
               {
                 "name":"$10 Off Coupon",

@@ -3,7 +3,7 @@ import sys
 import json
 
 import requests
-from flask import Flask, request
+from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
@@ -17,7 +17,7 @@ def verify():
             return "Verification token mismatch", 403
         return request.args["hub.challenge"], 200
 
-    return "<h2>Hello World</h2>", 200
+    return render_template('home.html'), 200
 
 
 @app.route('/', methods=['POST'])

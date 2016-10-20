@@ -19,7 +19,7 @@ def verify():
 
 	log("data")
 
-    return "Hello worldss", 200
+    return "Hello world 200", 200
 
 
 @app.route('/', methods=['POST'])

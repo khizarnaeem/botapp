@@ -17,7 +17,7 @@ def verify():
             return "Verification token mismatch", 403
         return request.args["hub.challenge"], 200
 
-	return render_template('home.html')
+    return "<h2>Hello World</h2>", 200
 
 
 @app.route('/', methods=['POST'])

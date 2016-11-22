@@ -1,2 +1,11 @@
-# Facebook Messenger Bot
-This is a simple python template that uses Flask to build a webhook for Facebook's Messenger Bot API.
+## Templating
+http://flask.pocoo.org/docs/0.11/templating/
+
+## Requests
+http://docs.python-requests.org/en/master/user/quickstart/#make-a-request
+
+## Flask
+http://flask.pocoo.org/docs/0.11/api/
+
+## Flask MVC
+https://github.com/salimane/flask-mvc/tree/master/project/controllers

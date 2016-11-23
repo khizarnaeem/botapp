@@ -1,3 +1,5 @@
-## other configuration excluded from example...
+languages:
+  JavaScript: true
+  Python: true
 exclude_paths:
-- "project/dist"
+- "project/dist/"
